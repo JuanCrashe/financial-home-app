@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block title %}Configuración | Finanzas Habitacional{% endblock %}
+
+{% block page_title %}Configuración del Sistema{% endblock %}
+
+{% block content %}
+                <div class="row">
+                    <div class="col-lg-3 mb-4">
+                        <div class="card border-0 shadow-sm sticky-top" style="top: 90px; z-index: 1;">
+                            <div class="list-group list-group-flush rounded-3">
+                                <a href="#" class="list-group-item list-group-item-action active fw-medium py-3 border-0" aria-current="true">
+                                    <i class="bi bi-person me-2"></i> Perfil
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action fw-medium py-3 border-0">
+                                    <i class="bi bi-bell me-2"></i> Notificaciones
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action fw-medium py-3 border-0">
+                                    <i class="bi bi-shield-lock me-2"></i> Seguridad
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action fw-medium py-3 border-0 text-danger">
+                                    <i class="bi bi-box-arrow-right me-2"></i> Cerrar Sesión
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-9">
+                        <!-- Profile Section -->
+                        <div class="card border-0 shadow-sm mb-4">
+                            <div class="card-header bg-transparent py-3">
+                                <h6 class="mb-0 fw-bold">Información del Conjunto</h6>
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="row g-3 mb-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label text-sm fw-medium">Nombre del Conjunto</label>
+                                            <input type="text" class="form-control" value="Residencias Los Pinos">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label text-sm fw-medium">RUC / NIT</label>
+                                            <input type="text" class="form-control" value="123456789001">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label text-sm fw-medium">Dirección</label>
+                                        <input type="text" class="form-control" value="Av. Principal 123, Ciudad">
+                                    </div>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label text-sm fw-medium">Email de Contacto</label>
+                                            <input type="email" class="form-control" value="contacto@lospinos.com">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label text-sm fw-medium">Teléfono</label>
+                                            <input type="text" class="form-control" value="+55 123 456 789">
+                                        </div>
+                                    </div>
+                                    <hr class="my-4">
+                                    <div class="d-flex justify-content-end">
+                                        <button type="button" class="btn btn-primary px-4">Guardar Cambios</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                         <!-- Preferences -->
+                        <div class="card border-0 shadow-sm">
+                             <div class="card-header bg-transparent py-3">
+                                <h6 class="mb-0 fw-bold">Preferencias Generales</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="mb-3 d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <p class="mb-0 fw-medium">Moneda Principal</p>
+                                        <small class="text-muted">Moneda utilizada para todos los reportes</small>
+                                    </div>
+                                    <select class="form-select w-auto">
+                                        <option selected>USD ($)</option>
+                                        <option>EUR (€)</option>
+                                    </select>
+                                </div>
+                                <hr class="my-3 opacity-10">
+                                <div class="form-check form-switch mb-3">
+                                    <input class="form-check-input" type="checkbox" id="emailNotif" checked>
+                                    <label class="form-check-label fw-medium" for="emailNotif">Enviar reportes mensuales por email</label>
+                                </div>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="budgetAlert" checked>
+                                    <label class="form-check-label fw-medium" for="budgetAlert">Alertar cuando el presupuesto supere el 90%</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+{% endblock %}

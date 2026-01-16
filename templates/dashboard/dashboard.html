@@ -1,0 +1,310 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard | Finanzas Habitacional{% endblock %}
+
+{% block page_title %}Resumen General{% endblock %}
+
+{% block content %}
+          <!-- Welcome Section -->
+          <div class="d-flex justify-content-between align-items-end mb-4">
+            <div>
+              <h2 class="fw-bold text-dark mb-1">Hola, Administrador</h2>
+              <p class="text-secondary mb-0">
+                Aquí está el estado financiero de Enero 2026
+              </p>
+            </div>
+            <div class="d-none d-sm-block">
+              <button class="btn btn-primary d-flex align-items-center gap-2">
+                <i class="bi bi-plus-lg"></i>
+                <span>Nuevo Registro</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Stats Cards -->
+          <div class="row g-4 mb-4">
+            <!-- Ingresos -->
+            <div class="col-md-6 col-xl-3">
+              <div class="card h-100 border-start border-4 border-success">
+                <div class="card-body">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-2"
+                  >
+                    <h6
+                      class="text-uppercase text-muted text-xs fw-semibold mb-0"
+                    >
+                      Ingresos Totales
+                    </h6>
+                    <span class="badge badge-soft-success rounded-pill"
+                      >+12.5%</span
+                    >
+                  </div>
+                  <h3 class="fw-bold text-dark mb-0">$8,245.00</h3>
+                  <small class="text-muted text-xs"
+                    >vs. $7,320.00 mes anterior</small
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Egresos -->
+            <div class="col-md-6 col-xl-3">
+              <div class="card h-100 border-start border-4 border-danger">
+                <div class="card-body">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-2"
+                  >
+                    <h6
+                      class="text-uppercase text-muted text-xs fw-semibold mb-0"
+                    >
+                      Egresos Totales
+                    </h6>
+                    <span class="badge badge-soft-danger rounded-pill"
+                      >+2.1%</span
+                    >
+                  </div>
+                  <h3 class="fw-bold text-dark mb-0">$3,820.50</h3>
+                  <small class="text-muted text-xs"
+                    >vs. $3,740.00 mes anterior</small
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Balance -->
+            <div class="col-md-6 col-xl-3">
+              <div class="card h-100 border-start border-4 border-primary">
+                <div class="card-body">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-2"
+                  >
+                    <h6
+                      class="text-uppercase text-muted text-xs fw-semibold mb-0"
+                    >
+                      Balance Actual
+                    </h6>
+                  </div>
+                  <h3 class="fw-bold text-primary mb-0">$24,580.00</h3>
+                  <small class="text-muted text-xs"
+                    >Fondo de reserva incluido</small
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Cobranza -->
+            <div class="col-md-6 col-xl-3">
+              <div class="card h-100 border-start border-4 border-warning">
+                <div class="card-body">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-2"
+                  >
+                    <h6
+                      class="text-uppercase text-muted text-xs fw-semibold mb-0"
+                    >
+                      Pendiente de Cobro
+                    </h6>
+                  </div>
+                  <h3 class="fw-bold text-dark mb-0">$1,250.00</h3>
+                  <small class="text-warning text-xs fw-medium"
+                    >8 Apartamentos en mora</small
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <!-- Recent Activity -->
+            <div class="col-lg-8">
+              <div class="card h-100">
+                <div
+                  class="card-header d-flex justify-content-between align-items-center"
+                >
+                  <h6 class="mb-0">Movimientos Recientes</h6>
+                  <a href="#" class="text-decoration-none text-sm fw-medium"
+                    >Ver Todo</a
+                  >
+                </div>
+                <div class="table-responsive">
+                  <table class="table table-custom table-hover mb-0">
+                    <thead>
+                      <tr>
+                        <th>Fecha</th>
+                        <th>Descripción</th>
+                        <th>Categoría</th>
+                        <th class="text-end">Monto</th>
+                        <th class="text-center">Estado</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-muted text-sm">13 Ene</td>
+                        <td>
+                          <span class="fw-medium text-dark d-block"
+                            >Pago Alícuota Apto 402</span
+                          ><span class="text-xs text-muted"
+                            >Ref: TRANSFER-9982</span
+                          >
+                        </td>
+                        <td>
+                          <span class="badge bg-light text-dark border"
+                            >Ingreso</span
+                          >
+                        </td>
+                        <td class="text-end fw-semibold text-success">
+                          +$120.00
+                        </td>
+                        <td class="text-center">
+                          <i class="bi bi-check-circle-fill text-success"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-muted text-sm">12 Ene</td>
+                        <td>
+                          <span class="fw-medium text-dark d-block"
+                            >Mantenimiento Jardines</span
+                          ><span class="text-xs text-muted"
+                            >Proveedor: GreenServices</span
+                          >
+                        </td>
+                        <td>
+                          <span class="badge bg-light text-dark border"
+                            >Servicios</span
+                          >
+                        </td>
+                        <td class="text-end fw-semibold text-danger">
+                          -$350.00
+                        </td>
+                        <td class="text-center">
+                          <i class="bi bi-check-circle-fill text-success"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-muted text-sm">12 Ene</td>
+                        <td>
+                          <span class="fw-medium text-dark d-block"
+                            >Pago Alícuota Apto 101</span
+                          ><span class="text-xs text-muted">Ref: EFECTIVO</span>
+                        </td>
+                        <td>
+                          <span class="badge bg-light text-dark border"
+                            >Ingreso</span
+                          >
+                        </td>
+                        <td class="text-end fw-semibold text-success">
+                          +$120.00
+                        </td>
+                        <td class="text-center">
+                          <i class="bi bi-check-circle-fill text-success"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-muted text-sm">10 Ene</td>
+                        <td>
+                          <span class="fw-medium text-dark d-block"
+                            >Reparación Bomba Agua</span
+                          ><span class="text-xs text-muted">Urgencia</span>
+                        </td>
+                        <td>
+                          <span class="badge bg-light text-dark border"
+                            >Mantenimiento</span
+                          >
+                        </td>
+                        <td class="text-end fw-semibold text-danger">
+                          -$180.00
+                        </td>
+                        <td class="text-center">
+                          <i class="bi bi-check-circle-fill text-success"></i>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Actions & Budgets -->
+            <div class="col-lg-4">
+              <!-- Quick Actions -->
+              <div class="card mb-4">
+                <div class="card-header">
+                  <h6 class="mb-0">Acciones Rápidas</h6>
+                </div>
+                <div class="card-body">
+                  <div class="d-grid gap-2">
+                    <button
+                      class="btn btn-outline-primary text-start d-flex align-items-center gap-2"
+                    >
+                      <i class="bi bi-wallet2"></i> Registrar Pago de Alícuota
+                    </button>
+                    <button
+                      class="btn btn-outline-danger text-start d-flex align-items-center gap-2"
+                    >
+                      <i class="bi bi-receipt"></i> Registrar Gasto Nuevo
+                    </button>
+                    <button
+                      class="btn btn-outline-secondary text-start d-flex align-items-center gap-2"
+                    >
+                      <i class="bi bi-printer"></i> Generar Reporte Mensual
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Mini Budget Overview -->
+              <div class="card">
+                <div
+                  class="card-header d-flex justify-content-between align-items-center"
+                >
+                  <h6 class="mb-0">Presupuesto Enero</h6>
+                  <span class="text-xs text-muted">65% del mes</span>
+                </div>
+                <div class="card-body">
+                  <div class="mb-4">
+                    <div class="d-flex justify-content-between mb-1">
+                      <span class="text-sm fw-medium">Mantenimiento</span>
+                      <span class="text-sm text-secondary">75%</span>
+                    </div>
+                    <div class="progress" style="height: 6px">
+                      <div
+                        class="progress-bar bg-warning"
+                        role="progressbar"
+                        style="width: 75%"
+                      ></div>
+                    </div>
+                    <small class="text-muted text-xs">$1,500 / $2,000</small>
+                  </div>
+                  <div class="mb-4">
+                    <div class="d-flex justify-content-between mb-1">
+                      <span class="text-sm fw-medium">Servicios Básicos</span>
+                      <span class="text-sm text-secondary">45%</span>
+                    </div>
+                    <div class="progress" style="height: 6px">
+                      <div
+                        class="progress-bar bg-success"
+                        role="progressbar"
+                        style="width: 45%"
+                      ></div>
+                    </div>
+                    <small class="text-muted text-xs">$900 / $2,000</small>
+                  </div>
+                  <div>
+                    <div class="d-flex justify-content-between mb-1">
+                      <span class="text-sm fw-medium">Imprevistos</span>
+                      <span class="text-sm text-secondary">10%</span>
+                    </div>
+                    <div class="progress" style="height: 6px">
+                      <div
+                        class="progress-bar bg-info"
+                        role="progressbar"
+                        style="width: 10%"
+                      ></div>
+                    </div>
+                    <small class="text-muted text-xs">$50 / $500</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+{% endblock %}

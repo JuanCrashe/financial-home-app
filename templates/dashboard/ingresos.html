@@ -1,0 +1,200 @@
+{% extends "base.html" %}
+
+{% block title %}Ingresos | Finanzas Habitacional{% endblock %}
+
+{% block page_title %}Gestión de Ingresos{% endblock %}
+
+{% block content %}
+                <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                    <h3 class="fw-bold mb-0 text-dark">Ingresos</h3>
+                    <div class="mt-3 mt-sm-0">
+                        <button class="btn btn-success d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#newIncomeModal">
+                            <i class="bi bi-plus-lg"></i> Nuevo Ingreso
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Filters -->
+                <div class="card mb-4 border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white border-end-0"><i class="bi bi-search text-muted"></i></span>
+                                    <input type="text" class="form-control border-start-0 ps-0" placeholder="Buscar por apartamento o referencia...">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <select class="form-select">
+                                    <option selected>Todos los Tipos</option>
+                                    <option value="1">Alícuota</option>
+                                    <option value="2">Reserva Salón</option>
+                                    <option value="3">Multa</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <input type="month" class="form-control" value="2026-01">
+                            </div>
+                            <div class="col-md-2">
+                                <button class="btn btn-outline-secondary w-100">Filtrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Table -->
+                <div class="card border-0 shadow-sm">
+                    <div class="table-responsive">
+                        <table class="table table-custom table-hover align-middle mb-0">
+                            <thead>
+                                <tr>
+                                    <th style="width: 40px;"><input class="form-check-input" type="checkbox"></th>
+                                    <th>Unidad</th>
+                                    <th>Concepto</th>
+                                    <th>Fecha</th>
+                                    <th>Método</th>
+                                    <th class="text-end">Monto</th>
+                                    <th class="text-center">Estado</th>
+                                    <th class="text-end">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td><span class="badge bg-primary bg-opacity-10 text-primary">Apto 201</span></td>
+                                    <td><span class="fw-medium text-dark">Cuota Mantenimiento Enero</span></td>
+                                    <td class="text-muted text-sm">14 Ene 2026</td>
+                                    <td class="text-xs text-muted">Transferencia</td>
+                                    <td class="text-end fw-bold text-dark">$120.00</td>
+                                    <td class="text-center"><span class="badge badge-soft-success rounded-pill">Pagado</span></td>
+                                    <td class="text-end">
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-light border-0" type="button" data-bs-toggle="dropdown">
+                                                <i class="bi bi-three-dots-vertical"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end border-0 shadow">
+                                                <li><a class="dropdown-item text-sm" href="#"><i class="bi bi-eye me-2"></i>Ver Detalle</a></li>
+                                                <li><a class="dropdown-item text-sm" href="#"><i class="bi bi-download me-2"></i>Descargar Recibo</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td><span class="badge bg-primary bg-opacity-10 text-primary">Apto 505</span></td>
+                                    <td><span class="fw-medium text-dark">Reserva BBQ</span></td>
+                                    <td class="text-muted text-sm">13 Ene 2026</td>
+                                    <td class="text-xs text-muted">Efectivo</td>
+                                    <td class="text-end fw-bold text-dark">$25.00</td>
+                                    <td class="text-center"><span class="badge badge-soft-warning rounded-pill">Pendiente</span></td>
+                                    <td class="text-end">
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-light border-0" type="button" data-bs-toggle="dropdown">
+                                                <i class="bi bi-three-dots-vertical"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end border-0 shadow">
+                                                <li><a class="dropdown-item text-sm" href="#"><i class="bi bi-eye me-2"></i>Ver Detalle</a></li>
+                                                <li><a class="dropdown-item text-sm" href="#"><i class="bi bi-check-lg me-2"></i>Confirmar Pago</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td><span class="badge bg-primary bg-opacity-10 text-primary">Apto 102</span></td>
+                                    <td><span class="fw-medium text-dark">Cuota Mantenimiento Enero</span></td>
+                                    <td class="text-muted text-sm">10 Ene 2026</td>
+                                    <td class="text-xs text-muted">Transferencia</td>
+                                    <td class="text-end fw-bold text-dark">$120.00</td>
+                                    <td class="text-center"><span class="badge badge-soft-success rounded-pill">Pagado</span></td>
+                                    <td class="text-end">
+                                        <div class="dropdown">
+                                            <button class="btn btn-sm btn-light border-0" type="button" data-bs-toggle="dropdown">
+                                                <i class="bi bi-three-dots-vertical"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end border-0 shadow">
+                                                <li><a class="dropdown-item text-sm" href="#"><i class="bi bi-eye me-2"></i>Ver Detalle</a></li>
+                                                <li><a class="dropdown-item text-sm" href="#"><i class="bi bi-download me-2"></i>Descargar Recibo</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                     <div class="card-footer bg-white border-top-0 py-3">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination justify-content-end mb-0 pagination-sm">
+                                <li class="page-item disabled"><a class="page-link" href="#">Anterior</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+    <!-- Modal Nuevo Ingreso -->
+    <div class="modal fade" id="newIncomeModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header border-bottom-0 pb-0">
+                    <h5 class="modal-title fw-bold">Registrar Nuevo Ingreso</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label text-sm fw-medium">Unidad / Apartamento</label>
+                            <select class="form-select">
+                                <option selected>Seleccionar...</option>
+                                <option value="1">Apto 101</option>
+                                <option value="2">Apto 102</option>
+                                <option value="3">Apto 201</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-sm fw-medium">Concepto</label>
+                            <select class="form-select">
+                                <option selected>Cuota Mantenimiento</option>
+                                <option value="1">Reserva Áreas Comunes</option>
+                                <option value="2">Multa</option>
+                                <option value="3">Otro</option>
+                            </select>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-6">
+                                <label class="form-label text-sm fw-medium">Monto</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input type="number" class="form-control" placeholder="0.00">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label text-sm fw-medium">Fecha</label>
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-sm fw-medium">Método de Pago</label>
+                            <select class="form-select">
+                                <option selected>Transferencia Bancaria</option>
+                                <option value="1">Efectivo</option>
+                                <option value="2">Cheque</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-sm fw-medium">Notas Adicionales</label>
+                            <textarea class="form-control" rows="2"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer border-top-0 pt-0">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary px-4">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block title %}Presupuestos | Finanzas Habitacional{% endblock %}
+
+{% block page_title %}Control Presupuestario{% endblock %}
+
+{% block content %}
+                <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                     <div>
+                        <h3 class="fw-bold mb-1 text-dark">Presupuesto 2026</h3>
+                        <p class="text-secondary mb-0">Ejecución acumulada al mes de Enero</p>
+                    </div>
+                    <div class="mt-3 mt-sm-0">
+                        <select class="form-select d-inline-block w-auto">
+                            <option>Enero 2026</option>
+                            <option>Febrero 2026</option>
+                        </select>
+                        <button class="btn btn-outline-primary ms-2"><i class="bi bi-download"></i></button>
+                    </div>
+                </div>
+
+                <!-- Overall Progress -->
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body">
+                         <h6 class="text-uppercase text-muted text-xs fw-semibold mb-3">Ejecución Global del Mes</h6>
+                         <div class="progress" style="height: 20px;">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 45%" data-bs-toggle="tooltip" title="Ingresos: 45%"></div>
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" data-bs-toggle="tooltip" title="Egresos: 25%"></div>
+                         </div>
+                         <div class="d-flex justify-content-between mt-2 text-sm text-muted">
+                             <span>Ingresos Recaudados: $8,245 (45%)</span>
+                             <span>Gastos Ejecutados: $3,820 (25%)</span>
+                         </div>
+                    </div>
+                </div>
+                
+                <h5 class="fw-bold text-dark mb-3">Detalle por Categoría</h5>
+                
+                <div class="row g-4">
+                    <!-- Category Item -->
+                    <div class="col-md-6 col-xl-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div>
+                                        <div class="badge bg-warning bg-opacity-10 text-warning mb-2">Mantenimiento</div>
+                                        <h5 class="fw-bold mb-0 text-dark">$1,500.00</h5>
+                                        <small class="text-muted">Gastado de $2,000.00</small>
+                                    </div>
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm btn-light p-1" type="button" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></button>
+                                    </div>
+                                </div>
+                                <div class="progress mb-2" style="height: 8px;">
+                                    <div class="progress-bar bg-warning" style="width: 75%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between text-xs">
+                                    <span class="fw-medium text-dark">75% Ejecutado</span>
+                                    <span class="text-muted">Quedan $500.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category Item -->
+                    <div class="col-md-6 col-xl-4">
+                         <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div>
+                                        <div class="badge bg-info bg-opacity-10 text-info mb-2">Servicios Básicos</div>
+                                        <h5 class="fw-bold mb-0 text-dark">$900.00</h5>
+                                        <small class="text-muted">Gastado de $2,000.00</small>
+                                    </div>
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm btn-light p-1" type="button" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></button>
+                                    </div>
+                                </div>
+                                <div class="progress mb-2" style="height: 8px;">
+                                    <div class="progress-bar bg-info" style="width: 45%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between text-xs">
+                                    <span class="fw-medium text-dark">45% Ejecutado</span>
+                                    <span class="text-muted">Quedan $1,100.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category Item Critical -->
+                    <div class="col-md-6 col-xl-4">
+                         <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div>
+                                        <div class="badge bg-danger bg-opacity-10 text-danger mb-2">Administración</div>
+                                        <h5 class="fw-bold mb-0 text-dark">$950.00</h5>
+                                        <small class="text-muted">Gastado de $1,000.00</small>
+                                    </div>
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm btn-light p-1" type="button" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></button>
+                                    </div>
+                                </div>
+                                <div class="progress mb-2" style="height: 8px;">
+                                    <div class="progress-bar bg-danger" style="width: 95%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between text-xs">
+                                    <span class="fw-bold text-danger">95% Ejecutado (Alerta)</span>
+                                    <span class="text-muted">Quedan $50.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+{% endblock %}
